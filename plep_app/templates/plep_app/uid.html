@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Uid - verification</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/reg_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<section class="uid">
+<div class="uid-content">
+<h3 class="mb-4">Enter UID Details Here</h3>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+
+<!-- {% for message in  messages %}
+  {{ message  }}
+{% endfor %} -->
+    <input type="text" class="form-control mt-1" name="uid" placeholder="E.g 434ueyr44">
+    <button type="submit" class="btn mt-3">Verify UID</button>
+
+</form>
+</div>
+</section>    
+    <script defer="true" src="{% static 'assets/js/reg_main.js' %}"></script>
+</body>
+</html></html>
